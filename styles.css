@@ -1,0 +1,146 @@
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --gray: #808080;
+  --dark-blue: rgb(34, 75, 198);
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 15px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #c23884;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 28px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  letter-spacing: 1.4;
+  background-color: whitesmoke;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: #c23884;
+}
+.nav-items {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  gap: 10px;
+  padding-top: 20px;
+}
+.nav-items2 {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.nav-items2 > div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.welcome-container > div:first-child {
+  font-size: 2.5em;
+}
+.welcome-container > div:nth-child(2) {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.welcome-container > span {
+  color: gray;
+  font-size: 1.2em;
+  font-style: italic;
+}
+.main-section {
+  display: flex;
+  margin-top: 4em;
+  justify-content: space-between;
+}
+.html-container {
+  width: 40vw;
+  background-color: var(--gray);
+  height: 3em;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  gap: 1em;
+  font-size: 1.2em;
+  border-radius: 5px;
+  color: var(--white);
+}
+.html-container > i {
+  width: 30px;
+}
+.language-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dark {
+  background-color: #333;
+  color: white;
+}
+.light {
+  color: black;
+  background: white;
+}

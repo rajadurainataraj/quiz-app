@@ -1,0 +1,41 @@
+.question-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px;
+  gap: 10px;
+}
+
+.question > p:first-child {
+  color: rgb(34, 75, 198);
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+}
+.question > h2 {
+  font-size: 1.6em;
+  /* width: 20em; */
+  margin-right: 20px;
+}
+.option {
+  background-color: gray;
+  color: white;
+  width: 40vw;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  margin-top: 1em;
+  border-radius: 5px;
+  font-size: 1.2em;
+  height: 3em;
+}
+.option.selected {
+  background-color: lightblue;
+}
+button:disabled {
+  border: 1px solid black;
+  background-color: grey;
+  color: white;
+
+  cursor: not-allowed;
+}
